@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(pom.xml)",
+      "Read(README.md)",
+      "Read(src/**)",
+      "Read(.gitignore)",
+      "Grep",
+      "Glob",
+      "LS",
+      "Bash(java:-version)",
+      "Bash(mvn:-version)",
+      "Bash(mvn:clean:*)",
+      "Bash(mvn:compile:*)",
+      "Bash(mvn:test-compile:*)",
+      "Bash(mvn:test:*)",
+      "Bash(mvn:dependency:tree)",
+      "WebFetch(domain:mvnrepository.com)",
+      "WebFetch(domain:docs.oracle.com)",
+      "WebFetch(domain:spring.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:stackoverflow.com)"
+    ],
+    "deny": [
+      "Read(./.env*)",
+      "Read(./secrets/**)",
+      "Read(~/.ssh/**)",
+      "Read(//etc/passwd)",
+      "Bash(rm:*)",
+      "Bash(git:push:*)"
+    ],
+    "ask": [
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Bash(mvn:package:*)",
+      "Bash(mvn:install:*)",
+      "Bash(mvn:deploy:*)",
+      "Bash(git:add:*)",
+      "Bash(git:commit:*)"
+    ],
+    "defaultMode": "default"
+  },
+  "sandbox": {
+    "autoAllowBashIfSandboxed": true,
+    "enabled": true
+  }
+}
